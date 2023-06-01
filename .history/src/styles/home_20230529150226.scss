@@ -1,0 +1,22 @@
+@import "./colors.scss";
+
+.main{
+    background-color: $primary-color;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.homeQuote{
+    background-color: $primary-color;
+    font-family: $text2;
+    
+}
+
+.loading{
+    font-family: $text3;
+
+}

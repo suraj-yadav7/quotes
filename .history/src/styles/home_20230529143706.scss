@@ -1,0 +1,14 @@
+@import "./colors.scss";
+
+body{
+    color: black;
+    background-color: $primary-color;
+}
+.main{
+    height: 92vh;
+}
+
+.loading{
+    background-color: $primary-color;
+    font-family: $font-primary;
+}

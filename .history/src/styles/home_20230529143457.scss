@@ -1,0 +1,8 @@
+@import "./colors.scss";
+body{
+    color: black;
+    background-color: var($secondary-color);
+}
+.main{
+    height: 92vh;
+}

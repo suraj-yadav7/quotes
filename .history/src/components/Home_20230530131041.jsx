@@ -1,0 +1,29 @@
+import React, { useEffect } from 'react'
+import "../styles/home.scss"
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchQuotes } from '../store/slice/quoteSlice'
+
+const Home = () => {
+    const dispatch = useDispatch()
+    const fetchData = useSelector((state) => state.quotes.quoteData)
+    const {loading} = useSelector((state) => state.quotes)
+    const defaultCatgory="success"
+    useEffect(()=>{
+        dispatch(fetchQuotes(defaultCatgory))
+    },[])
+
+    return (
+        <>
+        <div className='main bgImgMain'>
+        {loading?<div className='loading'><h4>Loading.....</h4></div>:   <div className='quote'>
+                <p>{fetchData.quote}</p>
+                <p className='author'>Author: {fetchData.author}</p>
+                <button onClick={() => dispatch(fetchQuotes(defaultCatgory))}>Get More..</button> 
+            </div> }
+         
+        </div>
+        </>
+    )
+}
+
+export default Home
